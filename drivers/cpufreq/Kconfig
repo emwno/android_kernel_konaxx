@@ -129,6 +129,12 @@ config CPU_FREQ_DEFAULT_GOV_INTERACTIVEX
 	help
 	  InteractiveX cpu hotplug suppport.
 
+config CPU_FREQ_DEFAULT_GOV_LULZACTIVEQ
+	bool "lulzactiveq"
+	select CPU_FREQ_GOV_LULZACTIVEQ
+	help
+	  Lulzactiveq by.
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -273,7 +279,10 @@ config CPU_FREQ_GOV_PEGASUSQ
 	tristate "'pegasusq' cpufreq policy governor"
 
 config CPU_FREQ_GOV_INTERACTIVEX
-	tristate "'interactiveX' cpufreq policy governor - from lean kernel"
+	tristate "'interactiveX' cpufreq policy governor"
+
+config CPU_FREQ_GOV_LULZACTIVEQ
+	tristate "'lulzactiveq' cpufreq policy governor"
 
 config CPU_FREQ_GOV_SLP
 	tristate "'slp' cpufreq policy governor"
